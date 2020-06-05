@@ -3,26 +3,28 @@ package top.duwd.common.util;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+
 import org.springframework.util.StringUtils;
 
 import java.time.Duration;
 import java.util.Set;
 
-@Component
+
 public class SeleniumUtil {
     public static final String TYPE_MOBILE = "Baidu-Mobile";
     public static final String TYPE_PC = "Baidu-PC";
     public static final String BAIDU_URL_PC = "https://www.baidu.com";
     public static final String BAIDU_URL_MOBILE = "https://m.baidu.com";
-    @Value("${webdriver.name}")
-    public static String DRIVE_NAME;// = "webdriver.chrome.driver";
-    @Value("${webdriver.value}")
-    public static String DRIVE_VALUE;// = "C:\\dev\\webdriver\\chromedriver.exe";
+
+//    @Value("${webdriver.name}")
+    public static String DRIVE_NAME = "webdriver.chrome.driver";
+//    @Value("${webdriver.value}")
+//    public static String DRIVE_VALUE = "C:\\dev\\webdriver\\chromedriver.exe";
+    public static String DRIVE_VALUE = "/home/ubuntu/chrome/chromedriver";
+
 
     public static WebDriver pcDrive = null;
     public static WebDriver mobileDrive = null;
