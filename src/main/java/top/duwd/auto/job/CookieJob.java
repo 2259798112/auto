@@ -26,7 +26,7 @@ public class CookieJob {
 
     @Value("${webdriver.name}")
     private String webDriveName;
-    @Value("${webdrive.value}")
+    @Value("${webdriver.value}")
     private String webDriveValue;
 
     @Scheduled(cron = "0 */30 * * * ?")
